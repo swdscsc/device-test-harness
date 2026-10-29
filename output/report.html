@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>设备侧自动化回归测试 · 报告</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:40px 32px;font:14px/1.65 "Microsoft YaHei",system-ui,sans-serif;color:#111;background:#fff}
+.wrap{max-width:940px;margin:0 auto}
+h1{font-size:24px;margin:0 0 4px}
+.sub{color:#777;font-size:13px;margin-bottom:28px}
+.cards{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.card{flex:1 1 150px;border:1px solid #e6e6e6;border-radius:10px;padding:14px 16px}
+.card b{display:block;font-size:23px;letter-spacing:-.5px}
+.card span{color:#777;font-size:12px}
+h2{font-size:15px;margin:30px 0 12px;padding-left:8px;border-left:3px solid #111}
+.bar-row{display:flex;align-items:center;gap:12px;margin-bottom:9px;font-size:13px}
+.bl{width:210px;color:#333}
+.bt{flex:1;height:9px;background:#f0f0f0;border-radius:5px;overflow:hidden;display:block}
+.bt i{display:block;height:100%;background:#dcdcdc;border-radius:5px}
+.bt b{display:block;height:100%;background:#111;border-radius:5px}
+.bv{width:56px;text-align:right;color:#666;font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;color:#888;font-weight:400;border-bottom:1px solid #e6e6e6;padding:8px 6px;font-size:12px}
+td{padding:7px 6px;border-bottom:1px solid #f4f4f4}
+.num{text-align:right;color:#888;font-variant-numeric:tabular-nums}
+.ok-pass{color:#111;font-weight:bold}
+.ok-fail{color:#c0392b;font-weight:bold}
+.ok-skipped{color:#aaa}
+tr.failed td{background:#fdf3f2}
+.legend{display:flex;gap:16px;font-size:12px;color:#666;margin-top:8px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.foot{margin-top:34px;color:#999;font-size:12px;border-top:1px solid #eee;padding-top:14px}
+</style></head><body><div class="wrap">
+<h1>设备侧自动化回归测试 · 执行报告</h1>
+<div class="sub">被测对象：串口设备固件（AT 指令协议）　·　执行时间 2026-10-29 21:48:23</div>
+
+<div class="cards">
+  <div class="card"><b>55</b><span>用例总数</span></div>
+  <div class="card"><b>55</b><span>通过</span></div>
+  <div class="card"><b>0</b><span>失败</span></div>
+  <div class="card"><b>15/15</b><span>协议分支覆盖</span></div>
+  <div class="card"><b>5.7 ms</b><span>响应时延 P95</span></div>
+</div>
+
+<div style="display:flex;gap:26px;align-items:center">
+  <svg width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="none" stroke="#111111" stroke-width="16" stroke-dasharray="339.29 0.00" stroke-dashoffset="-0.00" transform="rotate(-90 60 60)"/><text x="60" y="57" text-anchor="middle" font-size="21" font-weight="bold" fill="#111">100.0%</text><text x="60" y="74" text-anchor="middle" font-size="10" fill="#777">通过率</text></svg>
+  <div style="font-size:13px;color:#444;line-height:1.9">
+    共发送命令 <b>521</b> 条，重试 <b>11</b> 次，链路超时 <b>9</b> 次<br>
+    响应时延：P50 <b>4.47 ms</b>　P95 <b>5.7 ms</b>　最大 <b>54.77 ms</b><br>
+    已覆盖分支：*/err1、*/err2、*/err3、*/err4、*/err5、*/timeout、AT/ok、HUMI/ok、ID/ok、LED/ok、RATE/ok、RESET/ok、STATUS/ok、TEMP/ok、VER/ok
+  </div>
+</div>
+
+<h2>各套件通过情况</h2>
+<div class="bar-row"><span class="bl">test_01_conformance</span><span class="bt"><i style="width:63.2%"><b style="width:100.0%"></b></i></span><span class="bv">12/12</span></div><div class="bar-row"><span class="bl">test_02_negative</span><span class="bt"><i style="width:63.2%"><b style="width:100.0%"></b></i></span><span class="bv">12/12</span></div><div class="bar-row"><span class="bl">test_03_boundary</span><span class="bt"><i style="width:100.0%"><b style="width:100.0%"></b></i></span><span class="bv">19/19</span></div><div class="bar-row"><span class="bl">test_04_fault_recovery</span><span class="bt"><i style="width:47.4%"><b style="width:100.0%"></b></i></span><span class="bv">9/9</span></div><div class="bar-row"><span class="bl">test_05_soak</span><span class="bt"><i style="width:15.8%"><b style="width:100.0%"></b></i></span><span class="bv">3/3</span></div>
+<div class="legend"><span><i class="dot" style="background:#111"></i>通过</span>
+<span><i class="dot" style="background:#dcdcdc"></i>未通过</span></div>
+
+<h2>用例明细</h2>
+<table><thead><tr><th style="width:70px">结果</th><th>用例</th><th style="width:90px;text-align:right">耗时</th></tr></thead>
+<tbody><tr class="passed"><td class="ok-passed">PASS</td><td>test_握手返回就绪</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_版本号符合语义化格式</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_设备号非空</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_温度是合理范围内的浮点</td><td class="num">4 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_湿度是合理范围内的浮点</td><td class="num">4 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_STATUS字段齐全</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_开灯后状态真的变了</td><td class="num">8 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_关灯后状态真的变了</td><td class="num">14 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_设置上报速率后回读一致</td><td class="num">8 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_RESET恢复出厂值</td><td class="num">19 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_每条应答都以CRLF结尾</td><td class="num">28 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_连续读数稳定不漂移</td><td class="num">41 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_未知命令返回ERR1</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_未知命令带参数也返回ERR1</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_参数非数字返回ERR2</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_速率非数字返回ERR2</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_参数为空返回ERR2</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_参数为浮点返回ERR2</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_非法LED值返回ERR3</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_负LED值返回ERR3</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_非AT开头返回ERR4</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_小写命令按协议返回ERR4</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_错误应答同样以CRLF结尾</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_报错后设备仍然可用</td><td class="num">27 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_速率合法区间内全部接受[10]</td><td class="num">9 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_速率合法区间内全部接受[11]</td><td class="num">9 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_速率合法区间内全部接受[500]</td><td class="num">9 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_速率合法区间内全部接受[999]</td><td class="num">9 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_速率合法区间内全部接受[1000]</td><td class="num">9 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_速率越界全部拒绝[9]</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_速率越界全部拒绝[1001]</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_速率越界全部拒绝[0]</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_速率越界全部拒绝[-1]</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_速率越界全部拒绝[99999]</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_LED取值边界[0-ok]</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_LED取值边界[1-ok]</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_LED取值边界[2-err]</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_LED取值边界[-1-err]</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_LED取值边界[255-err]</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_越界操作不改变原有状态</td><td class="num">14 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_超长参数被拒绝</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_空命令返回未知命令</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_命令字大小写混写按未知命令处理</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_硬故障后链路可恢复[drop]</td><td class="num">305 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_硬故障后链路可恢复[slow]</td><td class="num">355 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_硬故障后链路可恢复[truncate]</td><td class="num">304 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_软故障被重试机制吸收[garbage]</td><td class="num">19 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_软故障被重试机制吸收[wrong]</td><td class="num">19 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_忙应答是合法错误而不是超时</td><td class="num">9 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_应答错位不会被误判为成功</td><td class="num">5 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_连续三次故障后仍能恢复</td><td class="num">904 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_故障后状态未被破坏</td><td class="num">339 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_200轮混合命令零失败</td><td class="num">891 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_长稳过程时延不劣化</td><td class="num">890 ms</td></tr><tr class="passed"><td class="ok-passed">PASS</td><td>test_复位后计数与状态都归零</td><td class="num">99 ms</td></tr></tbody></table>
+
+<div class="foot">由 pytest 插件自动生成　·　无外部依赖，单文件可直接分发</div>
+</div></body></html>
